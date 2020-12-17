@@ -1,0 +1,52 @@
+<br>
+<div class="container mt-12">
+    <form class="" autocomplete="off" [formGroup]="form" (ngSubmit)="enviar()">
+        <div class="form-group row">
+            <label for="nombre" name="lnombre" id="lnombre" class="col-2 col-form-label"><p class="text-center font-weight-bold">Nombre</p></label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre" [class.is-invalid]="ValidNombre">
+            </div>
+            <div *ngIf="ValidNombre" class="invalid-feedback">Dato Erroneo</div>
+        </div>
+        <div class="form-group row">
+            <label for="clave" class="col-2 col-form-label"><p class="text-center font-weight-bold">Precio Unitario</p></label>
+            <div class="col-8">
+                <input type="text" name="lclave" id="lclave" class="form-control" placeholder="Clave" formControlName="clave" [class.is-invalid]="validClave">
+            </div>
+            <div *ngIf="validClave" class="invalid-feedback">Dato Erroneo</div>
+        </div>
+        <div class="form-group row">
+            <label for="Precio" class="col-2 col-form-label"><p class="text-center font-weight-bold">Usuario</p></label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="Precio" formControlName="dinero" [class.is-invalid]="ValidDinero">
+            </div>
+            <div *ngIf="ValidDinero" class="invalid-feedback">Dato Erroneo</div>
+        </div>
+        <div class="form-group row">
+            <label for="Disponible" name="lcategoria" id="lcategoria" class="col-2 col-form-label"><p class="text-center font-weight-bold">Categoria</p></label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="Disponible" formControlName="Disponible" [class.is-invalid]="ValidDisp">
+            </div>
+            <div *ngIf="ValidDisp" class="invalid-feedback">Dato Erroneo</div>
+        </div>
+    </form>
+
+
+
+    <hr>
+
+    <div>
+
+        <form class="text-center" name="flibros" id="flibros">
+            <select name="select">
+    <option value="lAgregar">Agregar Libro</option> 
+    <option value="lEliminar" selected>Eliminar Libro</option>
+    <option value="lModificar">Modificar Libro</option>
+    <option value="lConsultar">Consultar Libro</option>
+  </select>
+            <input type="submit" value="Ir">
+        </form>
+
+
+    </div>
+</div>

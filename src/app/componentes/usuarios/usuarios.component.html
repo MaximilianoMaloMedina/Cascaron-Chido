@@ -1,0 +1,47 @@
+<div class="contenedor">
+    USUARIOS
+    <mat-form-field>
+      <input matInput [(ngModel)]="usu.uclave" type="string" placeholder="Clave/Matricula">
+    </mat-form-field><br>
+  
+    <mat-form-field>
+        <input matInput [(ngModel)]="usu.unombre" type="string" placeholder="Nombre">
+    </mat-form-field><br>
+    
+    <mat-form-field>
+        <input matInput [(ngModel)]="usu.uemail" type="string" placeholder="Email">
+      </mat-form-field><br>
+    
+      <mat-form-field>
+          <input matInput [(ngModel)]="usu.upassword" type="string" placeholder="Password">
+      </mat-form-field><br>
+
+      <mat-form-field>
+        <input matInput [(ngModel)]="usu.ugoogle" type="string" placeholder="Google">
+      </mat-form-field><br>
+    
+      <mat-form-field>
+          <input matInput [(ngModel)]="usu.urole" type="string" placeholder="Rol">
+      </mat-form-field><br>
+
+      <mat-form-field>
+        <input matInput [(ngModel)]="usu.uimg" type="string" placeholder="Foto">
+      </mat-form-field><br>
+    
+      <mat-form-field>
+          <input matInput [(ngModel)]="usu.uestado" type="string" placeholder="Estado">
+      </mat-form-field><br>
+
+      <mat-form-field>
+        <mat-select placeholder="Operaciones" [(ngModel)]="seleccionada" name="operacion">
+          <mat-option *ngFor="let op of operaciones" [value]="op.valor">
+            {{op.muestraValor}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="agregarusuario()">Ir</button>
+    <p>{{resultado}}</p>
+    
+  </div>
+
